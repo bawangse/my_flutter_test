@@ -62,7 +62,7 @@ class _ReadMdPageState extends State<ReadMdPage> {
         log.e('md-speak-error:卧槽，这个竟然没有$newIndex,${mdObj.height}');
         return -1;
       }
-// 如果 mdObj.height 没有获取全部，而是只保存了渲染的item，没有渲染的item没有保存，那么，mdObj.height[i]肯定有不存在的，执行的时候会报错的
+      // 如果 mdObj.height 没有获取全部，而是只保存了渲染的item，没有渲染的item没有保存，那么，mdObj.height[i]肯定有不存在的，执行的时候会报错的
       for (var i = 0; i < newIndex; i++) {
         currentHeight += mdObj.height[i];
       }
@@ -79,8 +79,8 @@ class _ReadMdPageState extends State<ReadMdPage> {
      */
     log.i(
         '阅读跳转：$newIndex ${mdObj.widgets} ${mdObj.mdControl!.position.minScrollExtent} ${mdObj.mdControl!.position.viewportDimension}');
-// mdObj.mdControl!.position.minScrollExtent 表示滚动区域的最小滚动偏移量，即列表的顶部位置对应的像素值 0
-// mdObj.mdControl!.position.viewportDimension 表示可见区域的高度，即当前显示在屏幕上的列表部分的高度 856.6
+    // mdObj.mdControl!.position.minScrollExtent 表示滚动区域的最小滚动偏移量，即列表的顶部位置对应的像素值 0
+    // mdObj.mdControl!.position.viewportDimension 表示可见区域的高度，即当前显示在屏幕上的列表部分的高度 856.6
     // mdObj.mdControl!.jumpTo(jumptonum);
     mdObj.mdControl!.scrollToIndex(
       newIndex,

@@ -5,6 +5,16 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "node",
+      "program": "${workspaceFolder}/wiki/appium/test.js",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+
+    {
       "name": "Flutter",
       "type": "dart",
       "request": "launch",
